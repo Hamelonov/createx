@@ -1,0 +1,22 @@
+[
+  {
+    "image": "images/services-preview/1.svg",
+    "title": "Construction",
+    "bgImage": "images/services/1.jpg"
+  },
+  {
+    "image": "images/services-preview/2.svg",
+    "title": "Project Development",
+    "bgImage": "images/services/2.jpg"
+  },
+  {
+    "image": "images/services-preview/3.svg",
+    "title": "Interior Design",
+    "bgImage": "images/services/3.jpg"
+  },
+  {
+    "image": "images/services-preview/4.svg",
+    "title": "Repairs",
+    "bgImage": "images/services/4.jpg"
+  }
+]

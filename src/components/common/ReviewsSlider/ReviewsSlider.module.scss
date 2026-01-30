@@ -1,0 +1,38 @@
+.slider {
+  position: relative;
+  width: 100%;
+
+  :global(.swiper-wrapper) {
+    width: 100%;
+  }
+
+  .navigation {
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    column-gap: rem(30);
+
+    .next,
+    .prev {
+      border: none;
+      background-color: var(--color-gray-200);
+    }
+  }
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(24);
+
+  .image {
+    @include square(rem(72));
+    border-radius: 100%;
+  }
+
+  .text {
+    color: var(--color-gray-800);
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "InDepth Consulting",
+    "image": "images/partners/1.svg"
+  },
+  {
+    "id": 2,
+    "name": "Higher Fit",
+    "image": "images/partners/2.svg"
+  },
+  {
+    "id": 3,
+    "name": "Sentinal Consulting",
+    "image": "images/partners/3.svg"
+  },
+  {
+    "id": 4,
+    "name": "Happy Home",
+    "image": "images/partners/4.svg"
+  },
+  {
+    "id": 5,
+    "name": "ForSale",
+    "image": "images/partners/5.svg"
+  },
+  {
+    "id": 6,
+    "name": "Sunset Reality",
+    "image": "images/partners/6.svg"
+  }
+]

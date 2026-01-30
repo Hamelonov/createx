@@ -1,0 +1,33 @@
+.field {
+  display: grid;
+  row-gap: rem(8);
+  justify-items: start;
+  font-size: rem(14);
+
+  &__label {
+    color: var(--color-gray-800);
+  }
+
+  &__control {
+    padding-inline: rem(16);
+    width: 100%;
+    height: rem(44);
+    background-color: var(--color-gray-200);
+    border: var(--border);
+    border-radius: rem(4);
+
+    &::placeholder {
+      color: var(--color-gray-600);
+    }
+
+    &:user-invalid {
+      border-color: var(--color-invalid);
+    }
+  }
+
+  textarea {
+    appearance: none;
+    resize: none;
+    padding-top: rem(11);
+  }
+}

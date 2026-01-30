@@ -1,0 +1,74 @@
+[
+  {
+    "image": "images/portfolio/1.jpg",
+    "title": "Red Finger Building",
+    "subtitle": "Business Centers",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  },
+  {
+    "image": "images/portfolio/2.jpg",
+    "title": "Cubes Building",
+    "subtitle": "Business Centers",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  },
+  {
+    "image": "images/portfolio/3.jpg",
+    "title": "The Pencil Building",
+    "subtitle": "Stores & Malls",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  },
+  {
+    "image": "images/portfolio/4.avif",
+    "title": "Red Skytower Building",
+    "subtitle": "Business Centers",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  },
+  {
+    "image": "images/portfolio/1.jpg",
+    "title": "Red Finger Building",
+    "subtitle": "Business Centers",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  },
+  {
+    "image": "images/portfolio/2.jpg",
+    "title": "Cubes Building",
+    "subtitle": "Business Centers",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  },
+  {
+    "image": "images/portfolio/3.jpg",
+    "title": "The Pencil Building",
+    "subtitle": "Stores & Malls",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  },
+  {
+    "image": "images/portfolio/4.avif",
+    "title": "Red Skytower Building",
+    "subtitle": "Business Centers",
+    "link": {
+      "name": "View Project",
+      "to": "/portfolio"
+    }
+  }
+]

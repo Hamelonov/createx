@@ -1,0 +1,21 @@
+.icon {
+  --size: #{rem(24)};
+  --src: #{url("icons/heart.svg")};
+  --direction: row-reverse;
+
+  display: inline-flex;
+  flex-direction: var(--direction);
+  align-items: center;
+  column-gap: rem(8);
+
+  &::after {
+    @include square(var(--size));
+
+    content: '';
+    flex-shrink: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: var(--src);
+  }
+}

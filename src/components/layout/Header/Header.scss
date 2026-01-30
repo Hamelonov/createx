@@ -1,0 +1,140 @@
+.header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: rem(92);
+  background-color: transparent;
+
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: rem(10) rem(50);
+
+  @keyframes scrolling-header {
+    to {
+      background-color: var(--color-white);
+      box-shadow: 0 0 1rem 0 var(--color-gray-400);
+    }
+  }
+
+  @include tablet {
+    font-size: rem(20);
+  }
+
+  &__inner {
+    height: 100%;
+    padding-block: rem(20);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: rem(60);
+    align-items: center;
+
+    @include laptop {
+      column-gap: rem(30);
+    }
+
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__overlay {
+    @include tablet-above {
+      display: contents;
+    }
+
+    @include tablet {
+      position: fixed;
+      inset: 0;
+
+      @include flex-center;
+
+      flex-direction: column;
+      row-gap: 2rem;
+      padding: 1rem;
+      background-color: var(--color-white);
+      transition-duration: var(--transition-duration);
+
+      &:not(.is-active) {
+        @include hide;
+
+        translate: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    overflow-x: auto;
+
+    @include tablet-above {
+      height: 100%;
+    }
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: rem(40);
+
+      @include tablet-above {
+        height: 100%;
+      }
+
+      @include tablet {
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+    }
+
+    &-link {
+      font-weight: bold;
+      white-space: nowrap;
+
+      &.active {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: start;
+    column-gap: rem(36);
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+
+    &-card {
+      display: grid;
+      grid-template-areas:
+				'icon title'
+				'icon link';
+      column-gap: rem(12);
+      align-items: center;
+    }
+
+    &-icon {
+      grid-area: icon;
+    }
+
+    &-title {
+      font-size: rem(14);
+      font-weight: bold;
+      grid-area: title;
+    }
+
+    &-link {
+      font-size: rem(18);
+      grid-area: link;
+    }
+  }
+}

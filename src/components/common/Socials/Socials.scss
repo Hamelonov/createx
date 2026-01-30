@@ -1,0 +1,13 @@
+.socials {
+  &__list {
+    display: flex;
+    column-gap: rem(16);
+    align-items: center;
+  }
+
+  &__link {
+    @include hover {
+      color: var(--color-white);
+    }
+  }
+}

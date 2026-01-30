@@ -1,0 +1,49 @@
+.checkbox {
+  display: flex;
+  gap: rem(8);
+  cursor: pointer;
+
+  &__control {
+    @include square(rem(16));
+
+    appearance: none;
+    position: relative;
+    border-radius: rem(3);
+    border: rem(1) solid var(--color-primary);
+    cursor: pointer;
+    flex-shrink: 0;
+
+    &:user-invalid {
+      border-color: var(--color-invalid);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-primary);
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &::after {
+      @include square(rem(10));
+
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      background: url("icons/check.svg") center/contain no-repeat;
+    }
+
+    &:checked::before {
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    font-size: rem(14);
+  }
+}
