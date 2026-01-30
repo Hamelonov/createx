@@ -31,7 +31,7 @@ const Ceo = () => {
               <p className="ceo__post">CEO - Createx Construction Bureau</p>
             </div>
             <img
-              class="ceo__sign"
+              className="ceo__sign"
               src="images/ceo/sign.svg"
               alt=""
               width="100"

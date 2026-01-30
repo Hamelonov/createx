@@ -4,7 +4,7 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/CreateX/',
+  base: '/createx',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
