@@ -11,7 +11,7 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/createx" element={<HomePage />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="*" element={<NotFound />} />
