@@ -6,9 +6,11 @@ import NotFound from "@/pages/NotFound/index.js";
 import ScrollToTop from "@/components/common/ScrollToTop/index.js";
 import AboutPage from "@/pages/AboutPage/index.js";
 
-function App() {
+const App = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
-    <Router>
+    <Router basename={baseUrl}>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />

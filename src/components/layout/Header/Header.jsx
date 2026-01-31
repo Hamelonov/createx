@@ -7,11 +7,11 @@ import './Header.scss'
 const Header = (props) => {
   const {
     navLinks = [
-      {name: 'About Us', to: 'about'},
-      {name: 'Services', to: 'services'},
-      {name: 'Work', to: 'work'},
-      {name: 'News', to: 'news'},
-      {name: 'Contacts', to: 'contacts'},
+      {name: 'About Us', to: '/about'},
+      {name: 'Services', to: '/services'},
+      {name: 'Work', to: '/portfolio'},
+      {name: 'News', to: '/news'},
+      {name: 'Contacts', to: '/contacts'},
     ],
     contactCards = [
       {
@@ -53,7 +53,7 @@ const Header = (props) => {
                       className="header__menu-item"
                     >
                       <NavLink
-                        to={`/${to}`}
+                        to={to}
                         className="header__menu-link"
                       >
                         {name}
