@@ -11,7 +11,7 @@ const ServicesPreview = (props) => {
         <div
           key={index}
           className={styles.card}
-          style={{'--bgImage': `url(${bgImage})`}}
+          style={{'--bgImage': `url(/${bgImage})`}}
         >
           <img
             className={styles.image}
