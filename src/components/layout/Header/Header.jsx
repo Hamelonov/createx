@@ -1,7 +1,7 @@
 import {useRef} from "react";
 import {NavLink} from 'react-router-dom'
 import BurgerButton from "./BurgerButton.jsx"
-import Logo from '@/components/ui/Logo/index.js'
+import Logo from '@/components/ui/Logo'
 import './Header.scss'
 
 const Header = (props) => {

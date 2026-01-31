@@ -14,7 +14,7 @@ const NotFound = () => {
     >
       <PageHeader
         page={formattedPath}
-        title="Page not found"
+        title="Page 404"
         bgImage="images/page-headers/404.gif"
       >
         <p>This page doesnt exist...</p>
