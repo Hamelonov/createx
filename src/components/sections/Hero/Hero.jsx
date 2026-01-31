@@ -11,7 +11,7 @@ const Hero = (props) => {
     slides = [
       {
         image: 'images/slider/1.jpg',
-        title: `<p>Hallo Onkel<span>Mehroj!</span></p>`,
+        title: `<p>Hallo Onkel <span>Mehroj!</span></p>`,
         subtitle: 'Ich habe diese Website entwickelt. Wie ist das? Gut or Schlecht? :)',
         link: {
           name: 'Mit Liebe Shahzod',
