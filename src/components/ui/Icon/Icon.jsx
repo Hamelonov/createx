@@ -13,7 +13,7 @@ const Icon = (props) => {
     <span
       className={`icon`}
       style={{
-        '--src': `url(${src})`,
+        '--src': `url(/${src})`,
         '--size': size + 'px',
         '--direction': direction === 'reverse' ? 'row' : 'row-reverse'
       }}
