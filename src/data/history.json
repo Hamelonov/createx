@@ -1,0 +1,42 @@
+{
+  "slides": [
+    {
+      "image": "/images/history/slide1.jpg"
+    },
+    {
+      "image": "/images/history/slide1.jpg"
+    },
+    {
+      "image": "/images/history/slide1.jpg"
+    }
+  ],
+  "timeline": [
+    {
+      "line": "Present"
+    },
+    {
+      "line": "March 2019"
+    },
+    {
+      "line": "November 2018"
+    },
+    {
+      "line": "July 2015"
+    },
+    {
+      "line": "August 2010"
+    },
+    {
+      "line": "February 2007"
+    },
+    {
+      "line": "May 2004"
+    },
+    {
+      "line": "October 2001"
+    },
+    {
+      "line": "June 2000"
+    }
+  ]
+}

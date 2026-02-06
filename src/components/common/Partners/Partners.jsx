@@ -1,12 +1,14 @@
 import styles from './Partners.module.scss'
+import clsx from "clsx";
 
 const Partners = (props) => {
   const {
+    className,
     partners,
   } = props
 
   return (
-    <div className={styles.partners}>
+    <div className={clsx(styles.partners, className)}>
       {partners.map(({id, name, image}) => (
         <div key={id} className={styles.imageWrapper}>
           <img

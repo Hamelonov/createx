@@ -22,6 +22,8 @@ import statsData from '@/data/stats.json'
 import newsData from '@/data/news.json'
 
 const HomePage = () => {
+  const partnersFirstSix = partnersData.slice(0, 6)
+
   return (
     <PageLayout className="home-page">
       <Hero />
@@ -93,7 +95,7 @@ const HomePage = () => {
         paddingBottom={0}
       >
         <SectionHeader title="Supported by 12+ partners" />
-        <Partners partners={partnersData} />
+        <Partners partners={partnersFirstSix} />
         <Reviews reviews={reviewsData} />
       </Section>
       <Section
@@ -112,8 +114,8 @@ const HomePage = () => {
         <SectionFooter
           title="Explore all our news posts"
           link={{
-            name:"View all news",
-            to:"/news"
+            name: "View all news",
+            to: "/news"
           }}
         />
       </Section>

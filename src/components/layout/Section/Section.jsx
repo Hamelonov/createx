@@ -1,7 +1,9 @@
 import styles from './Section.module.scss'
+import clsx from 'clsx'
 
 const Section = (props) => {
   const {
+    className,
     id,
     bgColor,
     paddingTop = 120,
@@ -25,7 +27,7 @@ const Section = (props) => {
   return (
     <section
       id={id}
-      className={styles.section}
+      className={clsx(styles.section, className)}
       style={{
         '--background-color': color,
         '--padding-top': paddingTop + 'px',

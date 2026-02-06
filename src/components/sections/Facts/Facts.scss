@@ -1,18 +1,16 @@
 .facts {
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(rem(120), rem(250)));
-    gap: 2rem;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(rem(120), rem(250)));
+  gap: 2rem;
+  justify-content: space-between;
 
-    @include tablet {
-      grid-template-columns: repeat(2, minmax(rem(120), rem(250)));
-      justify-content: space-around;
-    }
+  @include tablet {
+    grid-template-columns: repeat(2, minmax(rem(120), rem(250)));
+    justify-content: space-around;
+  }
 
-    @include mobile-s {
-      grid-template-columns: rem(240);
-    }
+  @include mobile-s {
+    grid-template-columns: rem(240);
   }
 
   &-card {

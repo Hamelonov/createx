@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "image": "/images/team/1.jpg",
+    "name": "Courtney Alexander",
+    "position": "CEO, Co-Founder",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "id": 2,
+    "image": "/images/team/2.jpg",
+    "name": "Calvin Fox",
+    "position": "CTO, Co-Founder",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "id": 3,
+    "image": "/images/team/3.jpg",
+    "name": "Johnny Lane",
+    "position": "Commercial Manager",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "id": 4,
+    "image": "/images/team/4.jpg",
+    "name": "Diane Mccoy",
+    "position": "Director of Human Resources",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "id": 5,
+    "image": "/images/team/5.jpg",
+    "name": "Judith Warren",
+    "position": "Lead Accountant",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "id": 6,
+    "image": "/images/team/6.jpg",
+    "name": "Floyd Simmmons",
+    "position": "Financial Director",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "id": 7,
+    "image": "/images/team/7.jpg",
+    "name": "Serenity Edwards",
+    "position": "Director of Marketing",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  },
+  {
+    "id": 8,
+    "image": "/images/team/8.jpg",
+    "name": "Shawn Edwards",
+    "position": "Tech Lead",
+    "socials": {
+      "linkedin": "#",
+      "twitter": "#",
+      "facebook": "#"
+    }
+  }
+]

@@ -1,4 +1,5 @@
 import './Slider.scss'
+import clsx from "clsx";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
 import Button from "@/components/ui/Button/index.js";
@@ -6,13 +7,14 @@ import {Link} from "react-router-dom";
 
 const Slider = (props) => {
   const {
-    className = '',
+    className,
     gap = 30,
     slides = [],
+    alt,
   } = props
 
   return (
-    <div className={`slider ${className}`}>
+    <div className={clsx('slider', className)}>
       <div className="slider__navigation">
         <button className="slider__navigation-prev">
           <svg
@@ -47,56 +49,84 @@ const Slider = (props) => {
           </svg>
         </button>
       </div>
-      <Swiper
-        className="slider__swiper"
-        modules={[Navigation]}
-        navigation={{
-          prevEl: '.slider__navigation-prev',
-          nextEl: '.slider__navigation-next',
-        }}
-        slidesPerView={3}
-        spaceBetween={gap}
-        breakpoints={{
-          320: {
-            slidesPerView: 1
-          },
-          767: {
-            slidesPerView: 2,
-            spaceBetween: gap / 2,
-          },
-          1023: {
-            slidesPerView: 3
-          },
-        }}
-      >
-        {slides.map(({image, title, subtitle, link}) => (
-          <SwiperSlide
-            className="slider__slide"
-          >
-            <article className="slide">
-              <div className="slide__image">
-                <img
-                  src={image}
-                  alt="Cubes Building"
-                />
-              </div>
-              <div className="slide__content">
-                <h3 className="slide__title">{title}</h3>
-                <p className="slide__category">{subtitle}</p>
-                <div className="slide__hidden">
-                  <Link to={link.to}>
-                    <Button
-                      altStyle
-                    >
-                      {link.name}
-                    </Button>
-                  </Link>
+      {alt ? (
+        <Swiper
+          className="slider__swiper"
+          modules={[Navigation]}
+          navigation={{
+            prevEl: '.slider__navigation-prev',
+            nextEl: '.slider__navigation-next',
+          }}
+        >
+          {slides.map(({image}) => (
+            <SwiperSlide
+              className="slider__slide slider__slide--alt"
+            >
+              <article className="slide">
+                <div className="slide__image">
+                  <img
+                    src={image}
+                    alt=""
+                  />
                 </div>
-              </div>
-            </article>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+              </article>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <Swiper
+          className="slider__swiper"
+          modules={[Navigation]}
+          navigation={{
+            prevEl: '.slider__navigation-prev',
+            nextEl: '.slider__navigation-next',
+          }}
+          slidesPerView={3}
+          spaceBetween={gap}
+          breakpoints={{
+            320: {
+              slidesPerView: 1
+            },
+            767: {
+              slidesPerView: 2,
+              spaceBetween: gap / 2,
+            },
+            1023: {
+              slidesPerView: 3
+            },
+          }}
+        >
+          {slides.map(({image, title, subtitle, link}) => (
+            <SwiperSlide
+              className="slider__slide"
+            >
+              <article className="slide">
+                <div className="slide__image">
+                  <img
+                    src={image}
+                    alt=""
+                  />
+                </div>
+                <div className="slide__content">
+                  <h3 className="slide__title">{title}</h3>
+                  <p className="slide__category">{subtitle}</p>
+                  {link && (
+                    <div className="slide__hidden">
+                      <Link to={link.to}>
+                        <Button
+                          altStyle
+                        >
+                          {link.name}
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
+                </div>
+              </article>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   )
 }

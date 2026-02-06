@@ -1,0 +1,56 @@
+.team {
+  .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: rem(30);
+    row-gap: rem(60);
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile-s {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .worker {
+    display: grid;
+    row-gap: rem(16);
+  }
+
+  .imageWrapper {
+    min-height: rem(340);
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: rem(4);
+    }
+  }
+
+  .desc {
+    display: grid;
+    row-gap: rem(4);
+  }
+
+  .footer {
+    margin-top: rem(80);
+    text-align: center;
+
+    .link {
+      color: var(--color-primary);
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
