@@ -1,9 +1,9 @@
-import './Slider.scss'
+import styles from './Slider.module.scss'
 import clsx from "clsx";
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Navigation} from "swiper/modules";
-import Button from "@/components/ui/Button/index.js";
-import {Link} from "react-router-dom";
+import ProjectCard from "@/components/ui/ProjectCard";
+import {useRef} from "react";
 
 const Slider = (props) => {
   const {
@@ -13,10 +13,16 @@ const Slider = (props) => {
     alt,
   } = props
 
+  const prevElRef = useRef(null);
+  const nextElRef = useRef(null);
+
   return (
-    <div className={clsx('slider', className)}>
-      <div className="slider__navigation">
-        <button className="slider__navigation-prev">
+    <div className={clsx(styles.slider, className)}>
+      <div className={styles.navigation}>
+        <button
+          ref={prevElRef}
+          className={styles.prevEl}
+        >
           <svg
             width="18"
             height="11"
@@ -32,7 +38,10 @@ const Slider = (props) => {
             />
           </svg>
         </button>
-        <button className="slider__navigation-next">
+        <button
+          ref={nextElRef}
+          className={styles.nextEl}
+        >
           <svg
             width="18"
             height="11"
@@ -51,35 +60,38 @@ const Slider = (props) => {
       </div>
       {alt ? (
         <Swiper
-          className="slider__swiper"
+          className={styles.swiper}
           modules={[Navigation]}
           navigation={{
-            prevEl: '.slider__navigation-prev',
-            nextEl: '.slider__navigation-next',
+            prevEl: prevElRef.current,
+            nextEl: nextElRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevElRef.current;
+            swiper.params.navigation.nextEl = nextElRef.current;
           }}
         >
           {slides.map(({image}) => (
-            <SwiperSlide
-              className="slider__slide slider__slide--alt"
-            >
-              <article className="slide">
-                <div className="slide__image">
-                  <img
-                    src={image}
-                    alt=""
-                  />
-                </div>
-              </article>
+            <SwiperSlide>
+              <img
+                className={styles.slideImage}
+                src={image}
+                alt=""
+              />
             </SwiperSlide>
           ))}
         </Swiper>
       ) : (
         <Swiper
-          className="slider__swiper"
+          className={styles.swiper}
           modules={[Navigation]}
           navigation={{
-            prevEl: '.slider__navigation-prev',
-            nextEl: '.slider__navigation-next',
+            prevEl: prevElRef.current,
+            nextEl: nextElRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevElRef.current;
+            swiper.params.navigation.nextEl = nextElRef.current;
           }}
           slidesPerView={3}
           spaceBetween={gap}
@@ -96,33 +108,16 @@ const Slider = (props) => {
             },
           }}
         >
-          {slides.map(({image, title, subtitle, link}) => (
+          {slides.map(({image, title, category, link}) => (
             <SwiperSlide
-              className="slider__slide"
+              className={styles.slide}
             >
-              <article className="slide">
-                <div className="slide__image">
-                  <img
-                    src={image}
-                    alt=""
-                  />
-                </div>
-                <div className="slide__content">
-                  <h3 className="slide__title">{title}</h3>
-                  <p className="slide__category">{subtitle}</p>
-                  {link && (
-                    <div className="slide__hidden">
-                      <Link to={link.to}>
-                        <Button
-                          altStyle
-                        >
-                          {link.name}
-                        </Button>
-                      </Link>
-                    </div>
-                  )}
-                </div>
-              </article>
+              <ProjectCard
+                image={image}
+                title={title}
+                category={category}
+                link={link}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

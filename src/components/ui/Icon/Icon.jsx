@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 import './Icon.scss'
+import clsx from "clsx";
 
 const Icon = (props) => {
   const {
+    className,
     src,
     size,
     direction,
@@ -11,7 +13,7 @@ const Icon = (props) => {
 
   return (
     <span
-      className={`icon`}
+      className={clsx('icon', className)}
       style={{
         '--src': `url(/${src})`,
         '--size': size + 'px',
@@ -24,7 +26,7 @@ const Icon = (props) => {
 }
 
 Icon.propTypes = {
-  src: PropTypes.string.isRequired,
+  src: PropTypes.any.isRequired,
   size: PropTypes.string.isRequired,
 }
 

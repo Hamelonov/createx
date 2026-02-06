@@ -1,74 +1,56 @@
 [
   {
     "image": "images/portfolio/1.jpg",
-    "title": "Red Finger Building",
-    "subtitle": "Business Centers",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
+    "title": "Cubes Building",
+    "category": "Business Centers",
+    "link": "/portfolio"
   },
   {
     "image": "images/portfolio/2.jpg",
-    "title": "Cubes Building",
-    "subtitle": "Business Centers",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
+    "title": "Modern Cottage",
+    "category": "Private houses",
+    "link": "/portfolio"
   },
   {
     "image": "images/portfolio/3.jpg",
+    "title": "Luxury Beach House",
+    "category": "Private houses",
+    "link": "/portfolio"
+  },
+  {
+    "image": "images/portfolio/4.jpg",
+    "title": "Modern Double Bedroom",
+    "category": "Apartments & flats",
+    "link": "/portfolio"
+  },
+  {
+    "image": "images/portfolio/5.jpg",
+    "title": "Kids Bedroom With Decorations",
+    "category": "Apartments & flats",
+    "link": "/portfolio"
+  },
+  {
+    "image": "images/portfolio/6.jpg",
     "title": "The Pencil Building",
-    "subtitle": "Stores & Malls",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
+    "category": "Stores & Malls",
+    "link": "/portfolio"
   },
   {
-    "image": "images/portfolio/4.avif",
-    "title": "Red Skytower Building",
-    "subtitle": "Business Centers",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
-  },
-  {
-    "image": "images/portfolio/1.jpg",
+    "image": "images/portfolio/7.jpg",
     "title": "Red Finger Building",
-    "subtitle": "Business Centers",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
+    "category": "Business Centers",
+    "link": "/portfolio"
   },
   {
     "image": "images/portfolio/2.jpg",
-    "title": "Cubes Building",
-    "subtitle": "Business Centers",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
+    "title": "Scandinavian Style Interior",
+    "category": "Private houses",
+    "link": "/portfolio"
   },
   {
     "image": "images/portfolio/3.jpg",
-    "title": "The Pencil Building",
-    "subtitle": "Stores & Malls",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
-  },
-  {
-    "image": "images/portfolio/4.avif",
-    "title": "Red Skytower Building",
-    "subtitle": "Business Centers",
-    "link": {
-      "name": "View Project",
-      "to": "/portfolio"
-    }
+    "title": "Brown and Gray Painted House",
+    "category": "Private houses",
+    "link": "/portfolio"
   }
 ]

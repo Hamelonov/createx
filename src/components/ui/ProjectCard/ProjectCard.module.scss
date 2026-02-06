@@ -1,0 +1,52 @@
+.projectCard {
+  position: relative;
+  padding-bottom: rem(95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+
+  &:hover {
+    .cardContent {
+      bottom: 0;
+    }
+  }
+}
+
+.cardImageWrapper {
+  width: 100%;
+  height: rem(345);
+  flex-shrink: 1;
+
+  .cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cardContent {
+  padding: rem(16) rem(20) rem(24);
+  width: 100%;
+  background-color: var(--color-white);
+  text-align: center;
+  transition-duration: var(--transition-duration);
+
+  &:has(.cardHiddenPart) {
+    position: absolute;
+    bottom: rem(-68);
+  }
+}
+
+.cardTitle {
+  // title
+}
+
+.cardCategory {
+  margin-top: rem(4);
+}
+
+.cardHiddenPart {
+  margin-top: rem(24);
+}

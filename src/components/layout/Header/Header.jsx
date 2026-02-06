@@ -1,18 +1,12 @@
 import {useRef} from "react";
 import {NavLink} from 'react-router-dom'
-import BurgerButton from "./BurgerButton.jsx"
+import BurgerButton from "./BurgerButton/BurgerButton.jsx"
 import Logo from '@/components/ui/Logo'
 import './Header.scss'
 
 const Header = (props) => {
   const {
-    navLinks = [
-      {name: 'About Us', to: '/about'},
-      {name: 'Services', to: '/services'},
-      {name: 'Work', to: '/portfolio'},
-      {name: 'News', to: '/news'},
-      {name: 'Contacts', to: '/contacts'},
-    ],
+    routes = [],
     contactCards = [
       {
         image: 'images/nav/phone.svg',
@@ -46,14 +40,16 @@ const Header = (props) => {
           <nav className="header__menu">
             <ul className="header__menu-list">
               {
-                navLinks.map(({name, to}) => {
+                routes
+                  .filter(route => route.name)
+                  .map(({path, name}) => {
                   return (
                     <li
-                      key={name}
+                      key={path}
                       className="header__menu-item"
                     >
                       <NavLink
-                        to={to}
+                        to={path}
                         className="header__menu-link"
                       >
                         {name}

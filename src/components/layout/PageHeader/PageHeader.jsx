@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import clsx from "clsx";
 import {useLocation} from "react-router-dom";
 import './PageHeader.scss'
 
 const PageHeader = (props) => {
   const {
-    className = '',
+    className,
     title,
     bgImage,
     children,
@@ -15,7 +16,7 @@ const PageHeader = (props) => {
   const formattedPath = cleanPath.charAt(0).toUpperCase() + cleanPath.slice(1);
 
   return (
-    <section className={`page-header ${className}`}>
+    <section className={clsx('page-header', className)}>
       <img
         className="page-header__bg-image"
         src={bgImage}
