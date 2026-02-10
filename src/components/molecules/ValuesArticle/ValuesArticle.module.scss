@@ -1,0 +1,18 @@
+.card {
+  max-width: rem(285);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile {
+    max-width: rem(320);
+  }
+}
+
+.image {
+  margin-bottom: rem(24);
+}
+
+.title {
+  margin-bottom: rem(8);
+}

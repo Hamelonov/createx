@@ -1,0 +1,34 @@
+.article {
+  display: flex;
+  gap: fluid(80, 20);
+  align-items: center;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    flex: 47% 0 1;
+    height: rem(420);
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .body {
+    max-width: rem(575);
+    flex: 46% 0 1;
+  }
+
+  .title {
+    @include fluid-text(32, 28);
+    margin-bottom: rem(24);
+  }
+
+  .text {
+    margin-bottom: rem(48);
+  }
+}

@@ -1,0 +1,10 @@
+.services {
+  display: grid;
+  row-gap: fluid(120, 30);
+
+  .service:nth-child(even) {
+    @include mobile-above {
+      flex-direction: row-reverse;
+    }
+  }
+}

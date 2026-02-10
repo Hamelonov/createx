@@ -1,0 +1,14 @@
+.contacts {
+  background: url("/images/contacts/bg.jpg") center/cover no-repeat;
+}
+
+.body {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  @include tablet {
+    justify-content: center;
+    padding: rem(20) 0;
+  }
+}

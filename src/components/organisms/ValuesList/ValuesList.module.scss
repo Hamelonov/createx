@@ -1,0 +1,15 @@
+.values {
+  display: grid;
+  justify-items: center;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  text-align: center;
+
+  @include mobile-above {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include tablet-above {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

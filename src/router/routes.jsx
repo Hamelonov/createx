@@ -1,17 +1,16 @@
-import HomePage from "@/pages/HomePage"
-import ServicesPage from "@/pages/ServicesPage"
-import AboutPage from "@/pages/AboutPage"
-import NotFound from "@/pages/NotFound"
-import PortfolioPage from "@/pages/PortfolioPage";
-import Contacts from "@/components/sections/Contacts";
-import News from "@/components/sections/News";
+import Home from "@/components/pages/Home"
+import Services from "@/components/pages/Services"
+import About from "@/components/pages/About"
+import NotFound from "@/components/pages/NotFound"
+import Portfolio from "@/components/pages/Portfolio";
+import News from "@/components/pages/News";
 
 const routes = [
-  {path: "/", element: <HomePage />},
-  {path: "/about", element: <AboutPage />, name: 'About Us'},
-  {path: "/services", element: <ServicesPage />, name: 'Services'},
-  {path: "/portfolio", element: <PortfolioPage />, name: 'Works'},
-  {path: "/news", element: <NotFound />, name: 'News'},
+  {path: "/", element: <Home />},
+  {path: "/about", element: <About />, name: 'About Us'},
+  {path: "/services", element: <Services />, name: 'Services'},
+  {path: "/portfolio", element: <Portfolio />, name: 'Works'},
+  {path: "/news", element: <News />, name: 'News'},
   {path: "/contacts", element: <NotFound />, name: 'Contacts'},
   {path: "*", element: <NotFound />},
 ]

@@ -1,0 +1,11 @@
+.news {
+  display: grid;
+  gap: rem(30);
+
+  @include tablet-above {
+    grid-template-columns: 57% 1fr;
+    *:nth-child(3n - 2) {
+      grid-row: span 2;
+    }
+  }
+}

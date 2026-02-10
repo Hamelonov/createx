@@ -1,15 +1,18 @@
 [
   {
+    "id": 1,
     "image": "images/values/1.svg",
     "title": "Quality",
     "subtitle": "Culpa nostrud commodo ea consequat aliquip reprehenderit. Veniam velit nostrud aliquip sunt."
   },
   {
+    "id": 2,
     "image": "images/values/2.svg",
     "title": "Safety",
     "subtitle": "Anim reprehenderit sint voluptate exercitation adipisicing laborum adipisicing. Minim empor est ea."
   },
   {
+    "id": 3,
     "image": "images/values/3.svg",
     "title": "Comfort",
     "subtitle": "Sit veniam aute dolore adipisicing nulla sit culpa. Minim mollit voluptate ullamco proident ea ad."

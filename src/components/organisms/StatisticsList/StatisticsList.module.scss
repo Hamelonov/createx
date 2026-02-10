@@ -1,0 +1,14 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: rem(48);
+  justify-content: center;
+
+  @include tablet {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @include mobile-s {
+    grid-template-columns: 1fr;
+  }
+}

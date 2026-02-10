@@ -1,6 +1,6 @@
 import './app.scss'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import ScrollToTop from "@/components/common/ScrollToTop";
+import ScrollToTop from "@/components/molecules/ScrollToTop";
 import routes from './router/routes.jsx'
 
 const App = () => {

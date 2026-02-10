@@ -1,0 +1,46 @@
+.navigation {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(rem(230), 1fr));
+  column-gap: rem(20);
+}
+
+.navButton {
+  height: rem(154);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: rem(16);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0 12px 10px -6px rgba(154, 156, 165, 0.04), 0 30px 24px -10px rgba(154, 156, 165, 0.05), 0 80px 80px -20px rgba(154, 156, 165, 0.08);
+  border-color: var(--color-white);
+
+  &.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    .icon svg path {
+      fill: var(--color-white);
+    }
+  }
+
+  &:not(.active) {
+    @include hover {
+      background-color: var(--color-white);
+      color: var(--color-primary);
+    }
+  }
+}
+
+.icon {
+  svg {
+    width: rem(48);
+    height: rem(48);
+
+    path {
+      fill: var(--color-primary);
+      transition: fill 0.3s;
+    }
+  }
+}

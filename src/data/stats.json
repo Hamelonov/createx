@@ -1,23 +1,27 @@
 [
   {
+    "id": 1,
     "percent": 98,
     "color": "#F89828",
     "title": "98%",
     "subtitle": "Totally satisfied clients"
   },
   {
+    "id": 2,
     "percent": 75,
     "color": "#F52F6E",
     "title": "20",
     "subtitle": "Years of experience"
   },
   {
+    "id": 3,
     "percent": 80,
     "color": "#5A87FC",
     "title": "9452",
     "subtitle": "Working hours spent"
   },
   {
+    "id": 4,
     "percent": 100,
     "color": "#03CEA4",
     "title": "100%",

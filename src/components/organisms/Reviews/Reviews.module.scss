@@ -1,0 +1,37 @@
+.reviews {
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+
+  @include tablet-above {
+    grid-template-columns: 1fr auto;
+  }
+
+  .slider {
+    margin-top: rem(100);
+  }
+
+  .side {
+    max-width: rem(500);
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .main {
+    min-width: 0;
+    max-width: rem(600);
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(60, 20);
+
+    .title {
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+}
